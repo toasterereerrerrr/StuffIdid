@@ -28,6 +28,10 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
         }
 
         nav h1 {
@@ -114,12 +118,20 @@
             }
 
             nav {
-                flex-direction: column;
-                gap: 10px;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                padding: 12px 5%;
+                gap: 6px 14px;
+            }
+
+            nav h1 {
+                font-size: 18px;
             }
 
             nav a {
-                margin-left: 10px;
+                margin-left: 0;
+                font-size: 14px;
             }
         }
     </style>
