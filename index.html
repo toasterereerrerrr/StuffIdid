@@ -36,12 +36,23 @@
 
         nav h1 {
             font-size: 22px;
+            flex-shrink: 0;
+        }
+
+        nav div {
+            display: flex;
+            gap: 25px;
+            align-items: center;
         }
 
         nav a {
             color: white;
             text-decoration: none;
-            margin-left: 25px;
+            padding: 8px 4px;
+            min-height: 44px;
+            display: flex;
+            align-items: center;
+            transition: color 0.2s;
         }
 
         nav a:hover {
@@ -56,12 +67,12 @@
         }
 
         .hero h2 {
-            font-size: clamp(1.8rem, 10vw, 5rem);
+            font-size: clamp(1.5rem, 8vw, 5rem);
             margin-bottom: 15px;
         }
 
         .hero p {
-            font-size: 20px;
+            font-size: clamp(16px, 4vw, 20px);
             color: #555;
             max-width: 650px;
         }
@@ -73,7 +84,7 @@
         }
 
         .projects h2 {
-            font-size: 35px;
+            font-size: clamp(28px, 6vw, 35px);
             margin-bottom: 40px;
             text-align: center;
         }
@@ -112,6 +123,11 @@
             color: #111;
             font-weight: bold;
             text-decoration: none;
+            padding: 8px 4px;
+            display: inline-block;
+            min-height: 44px;
+            display: flex;
+            align-items: center;
         }
 
         .project-card a:hover {
@@ -128,24 +144,57 @@
 
         /* Mobile */
         @media (max-width: 600px) {
+            .hero {
+                padding: 50px 20px;
+            }
+
             .hero h2 {
-                font-size: 38px;
+                margin-bottom: 20px;
+            }
+
+            .projects {
+                padding: 50px 5%;
+            }
+
+            .projects h2 {
+                margin-bottom: 30px;
+            }
+
+            .project-grid {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+
+            .project-card {
+                padding: 20px;
             }
 
             nav {
-                flex-direction: row;
                 flex-wrap: wrap;
-                justify-content: center;
                 padding: 12px 5%;
-                gap: 6px 14px;
+                gap: 12px;
             }
 
             nav h1 {
                 font-size: 18px;
+                width: 100%;
+                text-align: center;
+                margin-bottom: 8px;
+            }
+
+            nav div {
+                width: 100%;
+                justify-content: center;
+                gap: 8px;
             }
 
             nav a {
-                margin-left: 0;
+                font-size: 14px;
+                padding: 8px 8px;
+            }
+
+            footer {
+                padding: 20px 15px;
                 font-size: 14px;
             }
         }
